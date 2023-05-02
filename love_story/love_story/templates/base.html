@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Love Story!</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {%block  link%}{%endblock%}
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+
+{% include 'navbar.html' %}
+{%block  banner%}{%endblock%}
+
+  <section class="section">
+    <div class="container">
+        {%block  content%}{%endblock%}
+
+        {%block  pagination%}{%endblock %}
+    </div>
+  </section>
+  
+  </body>
+</html>
