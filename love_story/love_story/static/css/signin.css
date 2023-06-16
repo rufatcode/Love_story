@@ -151,16 +151,6 @@ button {
     text-align: center;
 }
 
-/* @media only screen and (max-width: 1120px) {
-    .form-div {
-        left: 20px;
-    }
-
-    .img-div {
-        right: 20px;
-    }
-} */
-
 @media only screen and (max-width: 786px) {
     .mobile-bg {
         display: block;
