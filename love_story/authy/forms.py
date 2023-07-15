@@ -24,7 +24,17 @@ def UniqueUser(value):
 
 
 class SignupForm(forms.ModelForm):
-    accountType=forms.CharField(widget=forms.TextInput(attrs={'class':'input is-medium'}), max_length=30, required=True,)
+    ACCOUNT_TYPES = (
+        ('photographer', 'Fotoqraf '),
+        ('videographer', 'Videoqraf'),
+        ('user', 'İstifadəçi'),
+    )
+    
+    accountType = forms.ChoiceField(
+        widget=forms.Select(attrs={'class': 'select is-medium'}),
+        choices=ACCOUNT_TYPES,
+        required=True,
+    )
     experience=forms.CharField(widget=forms.TextInput(attrs={'class':'input is-medium'}), max_length=30, required=True,)
     username = forms.CharField(widget=forms.TextInput(attrs={'class':'input is-medium'}), max_length=30, required=True,)
     email = forms.CharField(widget=forms.EmailInput(attrs={'class':'input is-medium'}), max_length=100, required=True,)
